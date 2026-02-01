@@ -1,0 +1,78 @@
+# ================================
+# .NET / C#
+# ================================
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+*.log
+
+# Visual Studio
+.vs/
+.vscode/
+*.vsidx
+*.dbmdl
+*.jfm
+*.pfx
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Build artifacts
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+
+# ================================
+# Configura��es sens�veis
+# ================================
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
+secrets.json
+
+# ================================
+# Banco de dados
+# ================================
+
+# SQL Server LocalDB / MDF
+*.mdf
+*.ldf
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# MySQL / PostgreSQL dumps
+*.sql
+*.dump
+*.bak
+
+# ================================
+# Logs
+# ================================
+logs/
+*.log
+
+# ================================
+# Outros
+# ================================
+node_modules/
+dist/
+.env
+.env.*
+**/desktop.ini
