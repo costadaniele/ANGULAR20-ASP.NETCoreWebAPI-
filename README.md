@@ -10,7 +10,17 @@ plataforma Udemy </strong>, utilizando <strong> Angular </strong> no frontend e 
 
 ### push
 
-`git remote add origin https://github.com/costadaniele/ASP.NET-CORE-WEB-API-ANGULAR-20.git` <br>
+`git remote add origin [link]` <br>
 `git branch -M main` <br>
 `git push -u origin main` <br>
+
+echo "# ANGULAR20-ASP.NETCoreWebAPI-" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin [link]
+git push -u origin main
+
+
 	
