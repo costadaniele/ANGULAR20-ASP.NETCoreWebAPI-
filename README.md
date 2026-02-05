@@ -10,13 +10,13 @@ plataforma Udemy </strong>, utilizando <strong> Angular </strong> no frontend e 
 
 ### repository
 
-`echo "# ANGULAR20-ASP.NETCoreWebAPI-" >> README.md`
-`git init`
-`git add README.md`
-`git commit -m "first commit"`
-`git branch -M main`
-`git remote add origin [link]`
-`git push -u origin main`
+`echo "# ANGULAR20-ASP.NETCoreWebAPI-" >> README.md` <br>
+`git init` <br>
+`git add README.md` <br>
+`git commit -m "first commit"` <br>
+`git branch -M main` <br>
+`git remote add origin [link]` <br>
+`git push -u origin main` <br>
 
 ### push
 
@@ -36,5 +36,10 @@ plataforma Udemy </strong>, utilizando <strong> Angular </strong> no frontend e 
 
 `ng g s [servicename]`
 
+<p> ambiente de teste e produção </p>
+
+`ng serve --open` <br>
+
+`ng serve --open --configuration production`
 
 	
