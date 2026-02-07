@@ -29,6 +29,7 @@ export class AddCategory {
   }
   
   private categoryService = inject(CategoryService);
+
   addCategoryFormGroup = new FormGroup({
     name: new FormControl<string>('', {
       nonNullable: true,
@@ -59,8 +60,5 @@ export class AddCategory {
     };
 
     this.categoryService.addCategory(AddCategoryRequestDto);
-
-
-
   }
 }
