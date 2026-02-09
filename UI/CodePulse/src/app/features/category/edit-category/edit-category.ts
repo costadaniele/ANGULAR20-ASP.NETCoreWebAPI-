@@ -73,4 +73,21 @@ export class EditCategory {
     }
     this.categoryService.updateCategory(id, updateCategoryRequestDto);
   }
+
+  deleteCategory() {
+    const id = this.id();
+    if (!id) {
+      return;
+    }
+
+    this.categoryService.deleteCategory(id)
+    .subscribe({
+      next: () => {
+        this.router.navigate(['/admin/categories']);
+      },
+      error: () => {
+        console.error('Something went wrong!');
+      },
+    });
+  }
 }
