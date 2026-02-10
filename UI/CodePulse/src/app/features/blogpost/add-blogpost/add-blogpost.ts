@@ -3,16 +3,21 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { BlogPostService } from '../services/blog-post-service';
 import { AddBlogPostRequest } from '../models/blogpost.model';
 import { Router } from '@angular/router';
+import { MarkdownComponent } from 'ngx-markdown';
+import { CategoryService } from '../../category/services/category-service';
 
 @Component({
   selector: 'app-add-blogpost',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MarkdownComponent],
   templateUrl: './add-blogpost.html',
   styleUrl: './add-blogpost.css',
 })
 export class AddBlogpost {
   blogPostService = inject(BlogPostService);
+  categoryService = inject(CategoryService);
   router = inject(Router);
+  private categoriesResourceRef = this.categoryService.getAllCategories();
+  categoriesResponse = this.categoriesResourceRef.value;
 
   addBlogPostForm = new FormGroup({
     title: new FormControl<string>('', {
@@ -46,10 +51,13 @@ export class AddBlogpost {
     isVisible: new FormControl<boolean>(false, {
       nonNullable: true,
     }),
+    categories: new FormControl<string[]>([]),
   });
 
   onSubmit() {
     const formRawValue = this.addBlogPostForm.getRawValue();
+
+    console.log(formRawValue);
 
     const requestDto: AddBlogPostRequest = {
       title: formRawValue.title,
@@ -59,7 +67,8 @@ export class AddBlogpost {
       featuredImageUrl: formRawValue.featuredImageUrl,
       isVisible: formRawValue.isVisible,
       urlHandle: formRawValue.urlHandle,
-      publisedDate: new Date(formRawValue.publishedDate)
+      publisedDate: new Date(formRawValue.publishedDate),
+      categories: formRawValue.categories ?? [],
     };
 
     this.blogPostService.createBlogPost(requestDto)
