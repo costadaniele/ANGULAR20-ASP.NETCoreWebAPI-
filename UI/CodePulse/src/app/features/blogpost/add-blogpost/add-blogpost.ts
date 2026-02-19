@@ -67,7 +67,7 @@ export class AddBlogpost {
       featuredImageUrl: formRawValue.featuredImageUrl,
       isVisible: formRawValue.isVisible,
       urlHandle: formRawValue.urlHandle,
-      publisedDate: new Date(formRawValue.publishedDate),
+      publishedDate: new Date(formRawValue.publishedDate),
       categories: formRawValue.categories ?? [],
     };
 
@@ -78,7 +78,7 @@ export class AddBlogpost {
 
         this.router.navigate(['/admin/blogposts']);
       }, error: () => {
-        console.error('Domething went wrong!');
+        console.error('Something went wrong!');
       }
     });    
   }

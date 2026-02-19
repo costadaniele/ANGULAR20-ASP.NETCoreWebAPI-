@@ -7,7 +7,19 @@ export interface AddBlogPostRequest {
     featuredImageUrl: string;
     urlHandle: string;
     author: string;
-    publisedDate: Date;
+    publishedDate: Date;
+    isVisible: boolean;
+    categories: string[];
+}
+
+export interface UpdateBlogPostRequest {
+    title: string;
+    shortDescription: string;
+    content: string;
+    featuredImageUrl: string;
+    urlHandle: string;
+    author: string;
+    publishedDate: Date;
     isVisible: boolean;
     categories: string[];
 }
@@ -20,7 +32,7 @@ export interface BlogPost {
     featuredImageUrl: string;
     urlHandle: string;
     author: string;
-    publisedDate: Date;
+    publishedDate: string;
     isVisible: boolean;
     categories: Category[];
 }
